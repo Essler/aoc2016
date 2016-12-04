@@ -14,7 +14,7 @@ func main(input string) {
 	moves := strings.Split(input, ", ")
 	for _, move := range moves {
 	  
-	  move_array := strings.Split(move,"")
+	  move_array := strings.SplitAfterN(move, "", 2)
 	  distance, err := strconv.Atoi(move_array[1])
 	  if (err != nil) { fmt.Println(err) }
 	  
